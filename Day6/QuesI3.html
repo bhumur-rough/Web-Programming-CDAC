@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>QuestionI3</title>
+    <script>
+        function addMovie(){
+            let name = document.getElementById("name").value;
+            let price = document.getElementById("price").value;
+            let seat = document.getElementById("seat").value;   
+            document.getElementById("ans").innerHTML += `<tr><td>${name}</td><td>${price}</td><td>${seat}</td></tr>`;
+        }
+    </script>
+</head>
+<body>
+    <input type="text" id="name" placeholder="Movie Name">
+    <input type="text" id="price" placeholder="Movie Price">
+    <input type="text" id="seat" placeholder="Movie Seat">
+    <button onclick="addMovie()">Submit</button>
+    <h3>
+        <table border=1 style="border-collapse: collapse; border:1px solid black;">
+            <thead>
+                <tr>
+                    <th colspan="3">Movies</th>
+                </tr>
+                <tr>
+                    <th>
+                        Name
+                    </th>
+                    <th>
+                        Price
+                    </th>
+                    <th>
+                        Seat
+                    </th>
+                </tr>
+            </thead>
+            <tbody id="ans">
+
+            </tbody>
+        </table>
+    </h3>
+</body>
+</html>

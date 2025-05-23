@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Question6</title>
+    <script>
+        var maxNumber;
+        var x = prompt("Enter how many numbers want to enter")
+        for(var i=1;i<=x;i++){
+            var num = prompt("Enter " + i + " Number");
+            if(i==1){
+                maxNumber= num;
+            }
+            if(maxNumber < num){
+                maxNumber= num;
+            }
+        }
+        document.write("Greatest Number of these numbers is " + maxNumber);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

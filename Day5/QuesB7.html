@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>QuestionB7</title>
+    <script>
+        function tableTillRange(){
+            let num = Number(document.getElementById("num1").value);
+            let range = Number(document.getElementById("num2").value);
+            let ans = "<table>";
+            for(let i = 1;i*num<=range;i++){
+                ans += `<tr><th>${num} * ${i} = ${num*i}</th></tr>`; 
+            }
+            ans += "</table>";
+            document.getElementById("ans").innerHTML = ans;
+        }
+    </script>
+</head>
+<body>
+    <h1>Table Till Range</h1>
+    <br><br>
+    Enter Number : <input type="text" name="" id="num1"/>
+    Enter Range : <input type="text" name="" id="num2"/>
+    <button onclick="tableTillRange()">Submit</button>
+    <h3 id="ans"></h3>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>QuestionC2</title>
+    <script>
+        function makeList(){
+            let size = Number(document.getElementById("num").value);
+            let ans = "<ol>"
+            for(let i =0;i<size;i++){
+                let x = prompt("Enter fruit name");
+                ans += `<li>${x}</li>`;
+            }
+            ans += "</ol>";
+            document.getElementById("ans").innerHTML = ans;
+        }
+    </script>
+</head>
+<body>
+    Enter number of fruits want to enter : <input type="text" id="num">
+    <button onclick="makeList()">Submit</button>
+    <h3 id="ans"></h3>
+</body>
+</html>

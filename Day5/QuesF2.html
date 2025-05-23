@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>QuestionF2</title>
+    <script>
+        function onlyEven(){
+            let string = document.getElementById("s").value;
+            let array = string.split(",");
+            let ans="";
+            for(let i = 0; i < array.length ; i++){
+                if(array[i]%2==0){
+                    ans += `${array[i]} `;
+                }
+            }
+            document.getElementById("ans").innerHTML = ans;
+        } 
+    </script>
+</head>
+<body>
+    Enter String : <input type="text" name="" id="s"/>
+    <button onclick="onlyEven()">Submit</button>
+    <h3 id="ans"></h3>
+</body>
+</html>

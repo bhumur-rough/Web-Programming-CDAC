@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>QuestionB4</title>
+    <script>
+        function calculate(){
+            let p = Number(document.getElementById("p").value);
+            let r = Number(document.getElementById("r").value);
+            let n = Number(document.getElementById("n").value);
+            let ans = p * ((1+r/100)**n) - p;
+            document.getElementById("ans").innerHTML = ans;
+        }
+    </script>
+</head>
+<body>
+    <h1>Compound Interest</h1>
+    <br><br>
+    p = Principal<br>
+    r = Rate of Interest<br>
+    n = period in years<br>
+
+    Enter Principal value : <input type="text" name="" id="p">
+    Enter Rate of Interest : <input type="text" name="" id="r">
+    Enter Period in Years : <input type="text" name="" id="n">
+    <button onclick="calculate()">Calculate</button>
+    <h3 id="ans"></h3>
+</body>
+</html>

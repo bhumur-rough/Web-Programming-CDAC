@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>QuestionG3</title>
+    <script>
+        function printEmp(){
+            let size = Number(document.getElementById("size").value);
+            if(size==0){
+                return;
+            }
+            let ans = `<table border=1> <tr> <th> Id </th> <th> Name </th> <th> Phone </th> <th> Salary</th></tr>`;
+            for(let i=1;i<=size;i++){
+                let id = prompt("Enter ID of " + i + "th Employee");
+                let name = prompt("Enter Name of " + i + "th Employee");
+                let phone = prompt("Enter Phone of " + i + "th Employee");
+                let salary = prompt("Enter Salary of " + i + "th Employee");
+                ans+= `<tr> <th> ${id}</th> <th>${name}</th> <th>${phone}</th> <th> ${salary}</th></tr>`;
+            }
+            ans += `</table>`;
+            document.getElementById("ans").innerHTML = ans;
+        }
+    </script>
+</head>
+<body>
+    Enter Number of Employee : <input type="text" name="" id="size"/>
+    <button onclick="printEmp()">Submit</button>
+    <h3 id="ans"></h3>
+</body>
+</html>

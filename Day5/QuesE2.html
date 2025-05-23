@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>QuestionE2</title>
+    <script>
+        function isPalandrome(){
+            let s = document.getElementById("string").value;
+            let i=0;
+            let j = s.length-1;
+            let ans = true;
+            while(i<j){
+                if(s.charAt(i)!=s.charAt(j)){
+                    ans = false;
+                    break;
+                }
+                i++;
+                j--;
+            }
+            if(ans){
+                document.getElementById("ans").innerHTML = s + " is Palandromic"; 
+            }else{
+                document.getElementById("ans").innerHTML = s + " is Not Palandromic";
+            }
+        }
+    </script>
+</head>
+<body>
+    Enter the string : <input type="text" id="string"/>
+    <button onclick="isPalandrome()">Submit</button>
+    <h3 id="ans"></h3>
+</body>
+</html>

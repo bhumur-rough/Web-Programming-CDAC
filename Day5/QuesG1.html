@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>QuestionG1</title>
+    <script>
+        function uniqueWords(){
+            let string = document.getElementById("s").value;
+            let array = string.split(" ");
+            let set = new Set(array);
+            array = Array.from(set);
+            let ans = "";
+            for(let i = 0;i<array.length;i++){
+                ans += array[i] + " ";
+            } 
+            document.getElementById("ans").innerHTML = ans;
+        } 
+    </script>
+</head>
+<body>
+    Enter String : <input type="text" name="" id="s"/>
+    <button onclick="uniqueWords()">Submit</button>
+    <h3 id="ans"></h3>
+</body>
+</html>

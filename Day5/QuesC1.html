@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>QuestionC1</title>
+    <script>
+        function isEndWithT(){
+            let s = document.getElementById("s").value;
+            if(s.charAt(s.length-1) == 't'){
+                ans = "Yes End with t";
+            }
+            else{
+                ans = "No, not End with t";
+            }
+            document.getElementById("ans").innerHTML = ans;
+        }
+    </script>
+</head>
+<body>
+    Enter A string : <input type="text" name="" id="s">
+    <button onclick="isEndWithT()">Submit</button>
+    <h3 id="ans"></h3>
+</body>
+</html>

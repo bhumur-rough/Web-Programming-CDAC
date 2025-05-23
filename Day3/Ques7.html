@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Question 7 Using CSS</title>
+    <style>
+        .constainer{
+            display: flex;
+        }
+        img{
+            width: 100px;
+            height: 100px;
+        }
+        .form-box{
+            display: flex;
+            flex-direction: row;
+
+        }
+        .box-row{
+            display: flex;
+            flex-direction: row;
+            gap: 2.5rem;
+        }
+        .box-col{
+            display: flex;
+            flex-direction: column;
+        }
+        .box{
+            border: 1px solid gray;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div>
+            <img src="images.jfif" alt="B">
+        </div>
+        <div>
+            <h1>Checkout form</h1>
+        </div>
+        <div>Below is an example form built entirely with Bootstrap’s form controls. Each required form group has a validation state that can be triggered by attempting to submit the form without completing it.</div>
+        <div class="form-box">
+            <div class="form">
+                <form action="">
+                    <div>
+                        Billing address
+                    </div>
+                    <div class="box-row">
+                        <div class="box-col">
+                            <div>
+                                First Name
+                            </div>
+                            <div>
+                                <input type="text">
+                            </div>
+                        </div>
+                        <div>
+                            <div>
+                                Last Name
+                            </div>
+                            <div>
+                                <input type="text">
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="cart">
+                <div>
+                    <div>
+                        Your cart
+                    </div>
+                    <div>
+                        3
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <div class="box-row box">
+                            <div class="box-col">
+                                <div>Product name</div>
+                                <div>Brief description</div>
+                            </div>
+                            <div>$12</div>
+                        </div>
+                        <div class="box-row box">
+                            <div class="box-col">
+                                <div>Second product</div>
+                                <div>Brief description</div>
+                            </div>
+                            <div>$8</div>
+                        </div>
+                        <div class="box-row box">
+                            <div class="box-col">
+                                <div>Third item</div>
+                                <div>Brief description</div>
+                            </div>
+                            <div>$5</div>
+                        </div>
+                        <div class="box-row box">
+                            <div class="box-col">
+                                <div>Promo code</div>
+                                <div>EXAMPLECODE</div>
+                            </div>
+                            <div>−$5</div>
+                        </div>
+                        <div class="box-row box">
+                            <div class="box-col">
+                                <div>Total (USD)</div>
+                            </div>
+                            <div>$20</div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <Input>Promo code</Input> 
+                    <button>Redeem</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

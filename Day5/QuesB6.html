@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>QuestionB6</title>
+    <script>
+        function evens(){
+            let n1 = Number(document.getElementById("num1").value);
+            let n2 = Number(document.getElementById("num2").value);
+            if(n2<n1){
+                let x = n1;
+                n1 = n2;
+                n2 = x;
+            }
+            let ans = "";
+            for(let i=n1;i<=n2;i++){
+                if(i%2==0){
+                    ans += `${i}, `;
+                }
+            }
+            document.getElementById("ans").innerHTML = "Even Numbers between " + n1 + " and " + n2 + " are : " + ans;
+        }
+    </script>
+</head>
+<body>
+    <h1>All Evens</h1>
+    <br><br>
+    Enter First Number : <input type="text" name="" id="num1"/>
+    Enter Second Number : <input type="text" name="" id="num2"/>
+    <button onclick="evens()">Submit</button>
+    <h3 id="ans"></h3>
+</body>
+</html>

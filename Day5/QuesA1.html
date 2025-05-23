@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>QuestionA1</title>
+    <script>
+        function isEvenOrOdd(){
+            let num = Number(document.getElementById("n").value);
+            let ans;
+            if(num%2==0){
+                ans = "Even";
+            }else{
+                ans = "Odd";
+            }
+            document.getElementById("ans").innerHTML = ans;
+        }
+    </script>
+</head>
+<body>
+    <h1>Odd Or Even :- </h1>
+    Number : <input id="n" type="text"/>
+    <button id="submit" onclick="isEvenOrOdd()">Submit</button>
+    <h3 id="ans" style="color: aqua;"></h3>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>QuestionI2</title>
+    <script>
+        let htmlStr="<ol>";
+        function addNameToList(){
+            let name = document.getElementById("name").value;
+            htmlStr += `<li> ${name} </li>`;
+            document.getElementById("ans").innerHTML = htmlStr + "</ol>";
+        }
+    </script>
+</head>
+<body>
+    <h1>Friend List</h1>
+    <input type="text" id="name">
+    <button onclick="addNameToList()">Add</button>
+    <h3 id="ans"></h3>
+</body>
+</html>

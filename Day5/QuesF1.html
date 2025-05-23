@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>QuestionF1</title>
+    <script>
+        function show(){
+            let string = document.getElementById("s").value;
+            let array = string.split(",");
+            let ans="";
+            for(let i = 0; i < array.length ; i++){
+                ans += `${array[i]} `;
+            }
+            document.getElementById("ans").innerHTML = ans;
+        } 
+    </script>
+</head>
+<body>
+    Enter String : <input type="text" name="" id="s"/>
+    <button onclick="show()">Submit</button>
+    <h3 id="ans"></h3>
+</body>
+</html>

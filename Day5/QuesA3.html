@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>QuestionA3</title>
+    <script>
+        function whichDayOfWeek(){
+            let days = ["Monday", "Tuesday", "Wednesday", "Thrusday", "Friday", "Saturday", "Sunday"];
+            let day = Number(document.getElementById("day").value);
+            document.getElementById("ans").innerHTML = days[day-1];
+        }
+    </script>
+</head>
+<body>
+    <h1>Print Day</h1>
+    Enter Day of Week <input type="text" id="day"/>
+    <button onclick="whichDayOfWeek()">Submit</button>
+    <h3 id="ans"></h3>
+</body>
+</html>

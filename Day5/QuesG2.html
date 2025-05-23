@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>QuestionG2</title>
+    <script>
+        function sum(){
+            let string = document.getElementById("s").value;
+            let array = string.split(",");
+            let ans = 0;
+            for(let i = 0;i<array.length;i++){
+                ans += Number(array[i]);
+            } 
+            document.getElementById("ans").innerHTML = ans;
+        } 
+    </script>
+</head>
+<body>
+    Enter String : <input type="text" name="" id="s"/>
+    <button onclick="sum()">Submit</button>
+    <h3 id="ans"></h3>
+</body>
+</html>

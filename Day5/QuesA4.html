@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>QuestionA4</title>
+    <script>
+        function calculate(){
+            let num1 = Number(document.getElementById("num1").value);
+            let num2 = Number(document.getElementById("num2").value);
+            let op = document.getElementById("opration").value;
+            let ans;
+            if(op=="+"){
+                ans = num1 + num2;
+            }else if(op=="-"){
+                ans = num1 - num2;
+            }else if(op=="*"){
+                ans = num1 * num2;
+            }else if(op=="/"){
+                ans = num1 / num2;
+            }else if(op=="%"){
+                ans = num1 % num2;
+            }else{
+                ans = "Invalid Operation";
+            }
+            document.getElementById("ans").innerHTML = ans;
+        }
+    </script>
+</head>
+<body>
+    <h1>Calculator</h1>
+    Enter 1st Number <input type="text" id="num1"/>
+    Enter 2nd Number <input type="text" id="num2"/>
+    Enter Operation <input type="text" id="opration"/>
+    <button onclick="calculate()">Submit</button>
+    <h3 id="ans"></h3>
+</body>
+</html>

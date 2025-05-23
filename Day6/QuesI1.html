@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>QuestionI1</title>
+    <script>
+        function add(){
+            let num1 = Number(document.getElementById("num1").value);
+            let num2 = Number(document.getElementById("num2").value);
+            document.getElementById("ans").innerHTML = num1 + num2;
+        }
+        function sub(){
+            let num1 = Number(document.getElementById("num1").value);
+            let num2 = Number(document.getElementById("num2").value);
+            document.getElementById("ans").innerHTML = num1 - num2;
+        }
+        function mul(){
+            let num1 = Number(document.getElementById("num1").value);
+            let num2 = Number(document.getElementById("num2").value);
+            document.getElementById("ans").innerHTML = num1 * num2;
+        }
+        function div(){
+            let num1 = Number(document.getElementById("num1").value);
+            let num2 = Number(document.getElementById("num2").value);
+            document.getElementById("ans").innerHTML = num1 / num2;
+        }
+        function mod(){
+            let num1 = Number(document.getElementById("num1").value);
+            let num2 = Number(document.getElementById("num2").value);
+            document.getElementById("ans").innerHTML = num1 % num2;
+        }
+    </script>
+</head>
+<body>
+    <input type="text" placeholder="1st Number" id="num1">
+    <input type="text" placeholder="2nd Number" id="num2">
+    <button onclick="add()">+</button>
+    <button onclick="sub()">-</button>
+    <button onclick="mul()">x</button>
+    <button onclick="div()">/</button>
+    <button onclick="mod()">%</button>
+    <h3 id="ans"></h3>
+</body>
+</html>

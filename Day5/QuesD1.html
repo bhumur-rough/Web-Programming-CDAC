@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>QuestionD1</title>
+    <script>
+        function add(){
+            let n1 = Number(document.getElementById("n1").value);
+            let n2 = Number(document.getElementById("n2").value);
+            let string = document.getElementById("s").value;
+            let array = string.split(",");
+            document.getElementById("ans").innerHTML = Number(array[n1]) + Number(array[n2]);
+        } 
+    </script>
+</head>
+<body>
+    Enter String : <input type="text" name="" id="s"/>
+    Enter 1st index : <input type="text" name="" id="n1">
+    Enter 2nd index : <input type="text" name="" id="n2">
+    <button onclick="add()">Submit</button>
+    <h3 id="ans"></h3>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Question2</title>
+    <style>
+        body{
+            background-color: rgb(95, 130, 43);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #container{
+            background-color: rgb(254, 254, 253);
+            width: 40rem;
+            height: 25rem;
+            margin-top: 20rem;
+            box-shadow: 4px 4px 4px 4px rgb(26, 150, 57);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .insideBox{
+            margin: 0.5rem;
+            width : 30rem;
+            display: flex;
+            padding: 0.15rem;
+            justify-content: center;
+        }
+        input{
+            border : 0 ;
+            font-size: larger;
+            width: 100%;
+            height: 2rem;
+            padding: 0.65rem;
+            background-color: rgb(219, 215, 215);
+        }
+        button{
+            color: aliceblue;
+            border : 0 ;
+            font-size: larger;
+            width: 30rem;
+            height: 3rem;
+            padding: 0.65rem;
+            background-color: green;
+        }
+        #notregister{
+            color: gray;
+        }
+        #create{
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+            <div id="username" class="insideBox">
+                <input type="text" placeholder="username">
+            </div>
+            <div id="password" class="insideBox">
+                <input type="text"  placeholder="password"/>
+            </div>
+            <div id="login"  class="insideBox">
+                <button>LOGIN</button>
+            </div>
+            <div id="newacc">
+                <span id="notregister">Not registered?</span>
+                <span "><a href="https://leetcode.com/" id="create">Create an account</a></span>
+            </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>QuestionA2</title>
+    <script>
+        function Mul(){
+            let mul = 1;
+            let num = Number(document.getElementById("n1").value);
+            mul *= num;
+            num = Number(document.getElementById("n2").value);
+            mul *= num;
+            num = Number(document.getElementById("n3").value);
+            mul *= num;
+            let ans = "Multiplication of these numbers : " + mul;
+            document.getElementById("ans").innerHTML = ans;
+        }
+        
+
+    </script>
+</head>
+<body>
+    <h1>Multiplication of 3 Numbers :- </h1>
+    Number 1 : <input id="n1" type="text"/>
+    Number 2 : <input id="n2" type="text"/>
+    Number 3 : <input id="n3" type="text"/>
+    <button id="submit" onclick="Mul()">Submit</button>
+    <h3 id="ans"></h3>
+</body>
+</html>

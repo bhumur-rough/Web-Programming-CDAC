@@ -1,0 +1,91 @@
+<html>
+	<head>
+		<title>Question11</title>
+		<style>
+			table{
+				border-collapse: collapse;
+				border : 2px solid black;
+			}
+			#comment-textarea{
+				display:flex;
+				align:center;
+			}
+		</style>
+	</head>
+	<body>
+		<table border = 2>
+			<form>
+				<tr>
+					<th>Last Name</th>
+					<td colspan = 3><input type = "text" size="35"/></td>
+				</tr>
+				<tr>
+					<th>First Name</th>
+					<td colspan = 3><input type = "text" size="35"/></td>
+				</tr>
+				<tr>
+					<th>Address</th>
+					<td colspan = 3><textarea></textarea/></td>
+				</tr>
+				<tr>
+					<th>City</th>
+					<td>
+						<input type = "text" size="15"/>
+					<td>
+						State
+					</td>
+					<td>
+						<input type = "text" size="5"/>
+					</td>
+				</tr>
+				<tr>
+					<th>Zip/Postal Code</th>
+					<td colspan = 3><input type = "text" size="35"/></td>
+				</tr>
+				<tr>
+					<th>Country</th>
+					<td colspan = 3><input type = "text" size="35"/></td>
+				</tr>
+				<tr>
+					<th>Phone (country code,<br>area code, number)</th>
+					<td colspan = 3>(+<input type = "text" maxlength="2" size="2"/>)<input type = "text" maxlength="2" size="2"/>-<input type = "text" maxlength="10" size="10"/></td>
+				</tr>
+				<tr>
+					<th>E-mail</th>
+					<td colspan = 3><input type = "mail" size="35"/></td>
+				</tr>
+				<tr>
+					<th>Birth date</th>
+					<td colspan = 3>Month<input type = "text" maxlength="2" size="2"/> Day<input type="text" maxlength="2" size="2"/> Year(4 digit)<input type="text" maxlength="4" size="4"/></td>
+				</tr>
+				<tr>
+					<th>Gender</th>
+					<td colspan = 3>
+						<select>
+							<option>Male</option>
+							<option>Female</option>
+							<option>Other</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<th>Starting date</th>
+					<td colspan = 3><input type = "radio" name="date"> Spring 2006 <input type = "radio"name="date"> Summer 2006</td>
+				</tr>
+				<tr>
+					<th>Comments/Quetions</th>
+					<td colspan = 3>
+						<div id="comment-textarea">
+							<textarea rows=5></textarea/>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td colspan=4 style="text-align:center">
+						<button>Submit</button>
+						<button>Clear This Form</button>
+					</td>
+			</form>
+		</table>
+	</body>
+</body>

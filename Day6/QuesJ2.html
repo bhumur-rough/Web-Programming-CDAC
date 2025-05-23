@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>QuestionJ2</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <style>
+        th{
+            text-align: center;
+        }
+        td{
+            text-align: center;
+        }
+    </style>
+    <script>
+        function addMovie(){
+            console.log("1")
+            let moviename = document.getElementById("name").value;
+            let actor = document.getElementById("actor").value;
+            let realease = document.getElementById("realease").value;   
+            console.log("2")
+            let typeArr = document.getElementsByName("type");
+            let type = [];
+            for(i=0;i<typeArr.length;i++){
+                if(typeArr[i].checked){
+                    type.push(typeArr[i].value);
+                }
+            }
+            console.log("3")
+            let langArr = document.getElementsByName("langRadio");
+            let lang = "";
+            if(langArr[0].checked){
+                lang = langArr[0].value;
+            }else if(langArr[1].checked){
+                lang = langArr[1].value;
+            }
+            console.log("4")
+            document.getElementById("ans").innerHTML += `<tr><td>${moviename}</td><td>${actor}</td><td>${realease}</td><td>${type}</td><td>${lang}</td></tr>`;
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="input-group container row row-cols-1 justify-content-center my-5">
+            <div action="" class="col-6 d-flex flex-column gap-3">
+                <div class="col">
+                    <input class="form-control" type="text" id="name" placeholder="Movie Name">
+                </div>
+                <div class="col">
+                    <input class="form-control" type="text" id="actor" placeholder="Actor">
+                </div>
+                <div class="col">
+                    <input class="form-control" type="date" id="realease" placeholder="Release">
+                </div>
+                
+
+
+                <div class="col">
+                    <input class="form-check-input" type="checkbox" name="type" value="2D" id="checkbox2d">
+                    <label class="form-check-label" for="flexCheckDefault">
+                        2D
+                    </label>
+                    <input class="form-check-input" type="checkbox" name="type" value="3D" id="checkbox3d">
+                    <label class="form-check-label" for="flexCheckDefault">
+                        3D
+                    </label>
+                    <input class="form-check-input" type="checkbox" name="type" value="IMAX" id="checkboximax">
+                    <label class="form-check-label" for="flexCheckDefault">
+                        IMAX
+                    </label>
+                </div>
+
+
+
+                <div class="col">
+                        <input class="form-check-input" type="radio" name="langRadio" value="English">
+                        <label class="form-check-label" for="flexRadioDefault1">
+                            English
+                        </label>
+                        <input class="form-check-input" type="radio" name="langRadio" value="Hindi">
+                        <label class="form-check-label" for="flexRadioDefault1">
+                            Hindi
+                        </label>
+                </div>
+
+
+
+                <div class="col">
+                    <button class="btn btn-primary" onclick="addMovie()">Submit</button>
+                </div>
+            </div>
+        </div>
+        <div class="my-5">
+            <table border=1 style="border-collapse: collapse; border:1px solid black;" class="table table table-striped">
+                <thead class="">
+                    <tr>
+                        <th colspan=5 class="px-4 text-center">Movies</th>
+                    </tr>
+                    <tr>
+                        <th>
+                            Name
+                        </th>
+                        <th>
+                            Actors
+                        </th>
+                        <th>
+                            Realease
+                        </th>
+                        <th>
+                            Type
+                        </th>
+                        <th>
+                            Language
+                        </th>
+                    </tr>
+                </thead>
+                <tbody id="ans"></tbody>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

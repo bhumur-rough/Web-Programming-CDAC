@@ -1,0 +1,137 @@
+<html>
+	<head>
+		<title>Question13</title>
+		<style>
+			.main{
+				border:1px solid black;
+			}
+			.scroll{
+				width: 150px;
+				height:60px;
+				overflow-x: hidden;
+				overflow-y: scroll;
+				border: 1px solid #ccc;
+				white-space: nowrap;
+			}
+			/*
+			.twodiv{
+				padding:15px;
+				display:flex;
+				flex-direction:rows;
+			}
+			.childoftwodiv{
+				padding:15px;
+				width:50%;
+			}
+			*/
+			.twodiv{
+			    display:flex;
+				justify-content: space-between;
+			}
+			.childoftwodiv{
+				flex : 1 1 auto;
+				min-height : 15rem;
+			}
+			#onediv{
+				padding:30px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="main">
+			<div id="onediv">
+				<h1>Internet Usage Survey</h1>
+			</div>
+			<div id="onediv">
+				This survey is being conducted to help identify the Internet usage patterns of our customers.<br>
+				Please take a few moments to complete and submit this short form. Thank you for your cooperation.
+			</div>
+			<div class="twodiv">
+				<div class="childoftwodiv">
+					What type of Internet connection do you have?<br>(Select One)
+				</div>
+				<div class="scroll"  class="childoftwodiv">
+						Dial-up<br>
+						DSL<br>
+						High Speed Cable<br>
+						Other
+				</div>
+			</div>
+			<div class="twodiv">
+				<div class="childoftwodiv">
+					What type of computer do your use most at home?
+				</div>
+				<div class="childoftwodiv">
+					<input type="radio" name="device"/>Desktop <input type="radio" name="device"/>Laptop	
+				</div>
+			</div>
+			<div class="twodiv">
+				<div class="childoftwodiv">
+					How would you describe your main reason for using the Internet?
+				</div>
+				<div class="childoftwodiv">
+					<input type="radio" name="task"/>To do work-related activities<br>
+					<input type="radio" name="task"/>To do school-related activities<br>
+					<input type="radio" name="task"/>For entainment purpose<br>
+					<input type="radio" name="task"/>Other activities<br>
+				</div>
+			</div>
+			<div class="twodiv">
+				<div class="childoftwodiv">
+					<fieldset>
+						<legend>Types of sites visited</legend>
+						
+						<div style="padding-bottom:10px;">
+						What types of web sites do you access most often?<br>
+						Check all that apply.
+						</div>
+						
+						<input type="radio" name="sites"/> Self Improvement<br>
+						<input type="radio" name="sites"/> Entertainment<br>
+						<input type="radio" name="sites"/> News and Sports<br>
+						<input type="radio" name="sites"/> Reference<br>
+						<input type="radio" name="sites"/> Email<br>
+					</fieldset>
+				</div>
+				<div class="childoftwodiv">
+					<fieldset>
+						<legend>Time spent using Internet</legend>
+						<div style="padding-bottom:10px;">
+						During an average week, how long do you spend online?
+						</div>
+						<input type="radio" name="sites"/> 0-3 Hours<br>
+						<input type="radio" name="sites"/> 4-6 Hours<br>
+						<input type="radio" name="sites"/> 7-10 Hours<br>
+						<input type="radio" name="sites"/> 11-14 Hours<br>
+						<input type="radio" name="sites"/> 15+ Hours<br>
+					</fieldset>
+				</div>
+			</div>
+			<div id="onediv">
+				Please comment on your opinions concerning Internet privacy and safty:<br>
+				<textarea rows=6 style="display:flex;
+				align:center;"></textarea>
+			</div>
+			<div class="twodiv">
+				<div class="childoftwodiv">
+					FirstName:
+					<input type="text"/>
+				</div>
+				<div class="childoftwodiv">
+					LastName:
+					<input type="text"/>
+				</div>
+			</div>
+			<div class="twodiv">
+				<div class="childoftwodiv">
+					Age:
+					<input type="text"/>
+				</div>
+				<div class="childoftwodiv">
+					Zip Code:
+					<input type="text"/>
+				</div>
+			</div>
+		</div>
+	</body>
+</body>

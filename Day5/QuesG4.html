@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>QuestionG4</title>
+    <script>
+        function printMovie(){
+            let size = Number(document.getElementById("size").value);
+            if(size==0){
+                return;
+            }
+            let ans = `<table border=1> <tr> <th> Name </th> <th> Price </th> <th> Seat</th></tr>`;
+            for(let i=1;i<=size;i++){
+                let name = prompt("Enter Name of " + i + "th Movie Ticket");
+                let price = prompt("Enter Price of " + i + "th Movie Ticket");
+                let seat = prompt("Enter Seat of " + i + "th Movie Ticket");
+                ans+= `<tr><th>${name}</th> <th>${price}</th> <th> ${seat}</th></tr>`;
+            }
+            ans += `</table>`;
+            document.getElementById("ans").innerHTML = ans;
+        }
+    </script>
+</head>
+<body>
+    Enter Number of Movies : <input type="text" name="" id="size"/>
+    <button onclick="printMovie()">Submit</button>
+    <h3 id="ans"></h3>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>QuestionB1</title>
+    <script>
+        function table(){
+            let num = Number(document.getElementById("num").value);
+            let ans = "<table>";
+            for(let i = 1;i<=10;i++){
+                ans += `<tr><th>${num} * ${i} = ${num*i}</th></tr>`; 
+            }
+            ans += "</table>";
+            document.getElementById("ans").innerHTML = ans;
+        }
+    </script>
+</head>
+<body>
+    <h1>Tables :</h1>
+    Enter Number of which table should be Print : <input type="text" id="num"/>
+    <button onclick="table()">Submit</button>
+    <h4 id="ans"></h4>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>QuestionE1</title>
+    <script>
+        function fibonacci(){
+            let size = Number(document.getElementById("num").value);
+            let series = [0 ,0, 1];
+            for(let i=3;i<=size;i++){
+                series.push(series[series.length-1] + series[series.length-2]);
+            }
+            let ans = "";
+            for(i=1;i<=size;i++){
+                ans += `${series[i]} ,  `;
+            }
+            document.getElementById("ans").innerHTML = ans;
+        }
+    </script>
+</head>
+<body>
+    <h1>Fibonacci Series</h1>
+    Enter Size of series want to print : <input type="text" id="num">
+    <button onclick="fibonacci()">Submit</button>
+    <h3 id="ans"></h3>
+</body>
+</html>
