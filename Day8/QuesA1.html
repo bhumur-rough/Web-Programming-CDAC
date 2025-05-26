@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <script>
+        // class Person{
+        //     constructor(name, age){
+        //         this.name = name
+        //         this.age = age
+        //     }
+        // }
+
+        // Person.prototype.greet = function(){
+        //     return `Hello, I'm ${this.name}`
+        // }
+
+        // var p1 = new Person("Bhumur",24)
+        // console.log(p1.greet())
+
+        
+
+        // class Student extends Person{
+        //     constructor(name,age,subjet) {
+        //         super(name,age)
+        //         this.subjet = subjet;
+        //     }
+        // }
+
+        // Student.prototype.show = function(){
+        //     return `${this.name} age is ${this.age} and Studying ${this.subjet}`
+        // }
+
+        // let s1 = new Student("Mukul",23,"Database");
+        // console.log(s1.show())
+        // console.log(s1.greet())
+
+
+        function Person(name,age){
+            this.name = name
+            this.age = age
+        }
+
+        Person.prototype.greet = function(){
+            return "hi " + this.name + " !"
+        }
+
+        function Student(name, age, subjet){
+            Person.call(this,name,age)
+            this.subjet = subjet
+        }
+
+        Student.prototype = Object.create(Person.prototype)
+        Student.prototype.studying = function (){
+            return this.name + " is " + this.subjet;
+        }
+
+        let s1 = new Student("Bhumur",24,"DSA")
+        console.log(s1.greet())
+        console.log(s1.studying())
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
