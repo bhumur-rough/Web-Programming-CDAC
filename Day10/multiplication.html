@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Multiplication</title>
+    <script>
+        function Multiply(){
+            document.getElementById("ans").innerHTML = Number(document.getElementById("num1").value) * Number(document.getElementById("num2").value)
+        }
+    </script>
+</head>
+<body>
+        <input type="text" placeholder="Number 1" id="num1"/>
+        <input type="text" placeholder="Number 2" id="num2"/>
+        <button onclick="Multiply()">Submit</button>
+        <h1 id="ans"></h1>
+</body> 
+</html>

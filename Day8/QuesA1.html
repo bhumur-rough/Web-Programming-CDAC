@@ -44,17 +44,21 @@
             return "hi " + this.name + " !"
         }
 
+
         function Student(name, age, subjet){
             Person.call(this,name,age)
             this.subjet = subjet
         }
 
         Student.prototype = Object.create(Person.prototype)
+
         Student.prototype.studying = function (){
             return this.name + " is " + this.subjet;
         }
 
         let s1 = new Student("Bhumur",24,"DSA")
+
+
         console.log(s1.greet())
         console.log(s1.studying())
 

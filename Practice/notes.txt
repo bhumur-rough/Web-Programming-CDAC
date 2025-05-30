@@ -1,0 +1,27 @@
+2^16
+
+http://192.168.1.2:5000/abc.html
+Host Name : 192.168.1.2
+Path : /abc.html
+PORT: 5000
+
+http://192.168.1.2:80/abc.html
+Host Name : 192.168.1.2
+Path : /abc.html
+PORT: 80
+
+http://192.168.1.2:80/
+Host Name : 192.168.1.2
+Path : /
+PORT: 80
+
+http://cdac.com:80/
+Host Name : cdac.com
+Path : /
+PORT: 80
+
+xyz.com:8000 -> first.xyz.com
+xyz.com:8001 -> second.xyz.com
+xyz.com:8002 -> third.xyz.com
+xyz.com:8003 -> fourth.xyz.com
+

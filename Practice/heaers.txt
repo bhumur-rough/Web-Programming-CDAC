@@ -1,0 +1,40 @@
+GET /mx-linux-blog/ HTTP/2
+Host: mxlinux.org
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:138.0) Gecko/20100101 Firefox/138.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br, zstd
+Connection: keep-alive
+Referer: https://mxlinux.org/
+Cookie: cf_clearance=ftgkKKQyGuoqj3Q36afaVUd55l29MN9R0z7ttrbvU7c-1748486740-1.2.1.1-tLmq1HSkvSePiNELAmvznshpOCkrEkb6pRUXPshJXjTcFFeRlNzVaZymmNLRBuljOeShsLb6fYqXdIq31nTDlFOTteXZ1zET1KUnvmmnTq_VKJBJkNdMtbRTWoOLqj0YqpoVZuifiIm8razuoD.6V7.1NJgpSF4Cidy8bPCr1BjyZnRV17uK9vqq4I_t3a_tkd4ZIUtOtFcmjBPsWc2ETUEEPSpN1N4_40ePJAQ3leqdY4n9tb9IDAoQ_gJcdrEz4yOMvw2WGemsdep4sb.uY9u3FV4Mi5lIK_N8iDVXqsBG9s_9kDrv8vxN7Ub4li7uFnOPaZaYWYA8TK4p6ugmxaoigjKTi2f7xDmLWgmy6R26tC9vhw1DJ1UXBw.XVHPE; __stripe_mid=d0510b74-28fc-4f4f-a9bc-7adc977e0c018d623b; __stripe_sid=7fe05bc5-5520-42e1-85aa-980194b3a14ef47761
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: same-origin
+Sec-Fetch-User: ?1
+DNT: 1
+Sec-GPC: 1
+Priority: u=0, i
+TE: trailers
+[Header][Request Body]
+
+[Header][Resposnse body]
+HTTP/2 200 
+date: Thu, 29 May 2025 02:46:09 GMT
+content-type: text/html; charset=UTF-8
+cf-ray: 9472a8dfad6fe1af-MRS
+server: cloudflare
+content-encoding: zstd
+vary: Cookie,User-Agent,Accept-Encoding
+last-modified: Mon, 26 May 2025 07:31:35 GMT
+cache-control: max-age=0, no-cache, no-store, must-revalidate
+pragma: no-cache
+expires: Mon, 29 Oct 1923 20:30:00 GMT
+cf-cache-status: DYNAMIC
+report-to: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=EWngzimGjV%2B7CVop3aVDL3o7%2FRCGLR7P5z6mfjMRq39omyDwdBlZWZikaIFZp%2BwJmSdGUBg9Ny5AP2Z28tB8%2Fc3lrnAt5md%2Fm1f0bi7XMq0VNnuGFJUDOIegdug8Ag%3D%3D"}],"group":"cf-nel","max_age":604800}
+nel: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+alt-svc: h3=":443"; ma=86400
+server-timing: cfL4;desc="?proto=TCP&rtt=103995&min_rtt=101216&rtt_var=603&sent=1428&recv=807&lost=0&retrans=0&sent_bytes=1930280&recv_bytes=38899&delivery_rate=7427772&cwnd=1446&unsent_bytes=0&cid=147f2d075f08676f&ts=37511&x=0"
+X-Firefox-Spdy: h2
+
+

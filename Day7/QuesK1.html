@@ -22,73 +22,94 @@
         }
     </style>
     <script>
-        function addMovie(event){
-                event.preventDefault();
-                console.log("prevent")            
-                var name = event.target.name.value
-                console.log(name)
-                var actor = event.target.actor.value;
-                console.log(actor)
-                var realease = event.target.realease.value;
-                console.log(realease)
-                var typeArray = event.target.type;
-                console.log(typeArray)
-                let type = [];
-                var lang = event.target.langRadio.value;
-                console.log(lang)
-                for(let i=0;i<typeArray.length;i++){
-                    if(typeArray[i].checked){
-                        type.push(typeArray[i].value);
-                    }
+
+        function validate(event){
+            let valid = true;
+            var name = event.target.name.value;
+            var actor = event.target.actor.value;
+            var realease = event.target.realease.value;
+            var lang = event.target.langRadio.value;
+            var typeArray = event.target.type;
+            let type = [];
+            for(let i=0;i<typeArray.length;i++){
+                if(typeArray[i].checked){
+                    type.push(typeArray[i].value);
                 }
+            }
+            if(name.length < 5){
+                valid = false;
+                document.getElementById("error_name").innerHTML = "Name length should be at least 5"
+            }
+            else{
+                document.getElementById("error_name").innerHTML = ""
+            }
+            if(actor.length < 3){
+                valid = false;
+                document.getElementById("error_actor").innerHTML = "Name length should be at least 3"
+            }
+            else{
+                document.getElementById("error_actor").innerHTML = ""
+            }
+            if(realease=='' || new Date(realease)>new Date()){
+                console.log("dw")
+                valid = false;
+                document.getElementById("error_release").innerHTML = "date should be valid &should be past"
+            }
+            else{
+                document.getElementById("error_release").innerHTML = ""
+            }
+            if(type.length < 1){
+                valid = false;
+                document.getElementById("error_type").innerHTML = "one box should be checked"
+            }
+            else{
+                document.getElementById("error_type").innerHTML = ""
+            }
+            if(lang==""){
+                valid = false;
+                document.getElementById("error_lang").innerHTML = "one option should be tick"
+            }
+            else{
+                document.getElementById("error_lang").innerHTML = ""
+            }
+            return valid ? {
+                name : name,
+                actor : actor,
+                realease : realease.split("T"),
+                type : type,
+                lang : lang
+            } : undefined
+        }
+        function addMovie(event){
+                event.preventDefault(); 
+                let ans = validate(event);
+
                 document.getElementById("ans").innerHTML += `<tr>
-                                                                <td> ${name} </td>
-                                                                <td> ${actor} </td>
-                                                                <td> ${realease} </td>
-                                                                <td> ${type} </td>
-                                                                <td> ${lang} </td>
+                                                                <td> ${ans.name} </td>
+                                                                <td> ${ans.actor} </td>
+                                                                <td> ${ans.realease} </td>
+                                                                <td> ${ans.type} </td>
+                                                                <td> ${ans.lang} </td>
                                                             </tr>`;
             }
-        //document.getElementById("ans").addEventListener('click',addMovie)
-        // function addMovie(){
-        //     console.log("1")
-        //     let moviename = document.getElementById("name").value;
-        //     let actor = document.getElementById("actor").value;
-        //     let realease = document.getElementById("realease").value;   
-        //     console.log("2")
-        //     let typeArr = document.getElementsByName("type");
-        //     let type = [];
-        //     for(i=0;i<typeArr.length;i++){
-        //         if(typeArr[i].checked){
-        //             type.push(typeArr[i].value);
-        //         }
-        //     }
-        //     console.log("3")
-        //     let langArr = document.getElementsByName("langRadio");
-        //     let lang = "";
-        //     if(langArr[0].checked){
-        //         lang = langArr[0].value;
-        //     }else if(langArr[1].checked){
-        //         lang = langArr[1].value;
-        //     }
-        //     console.log("4")
-        //     document.getElementById("ans").innerHTML += `<tr><td>${moviename}</td><td>${actor}</td><td>${realease}</td><td>${type}</td><td>${lang}</td></tr>`;
-        // }
     </script>
 </head>
 <body>
     <div class="container">
         
-        <form class="input-group container row row-cols-1 justify-content-center my-5"> <!--  onsubmit="addMovie(event)" -->
+        <form class="input-group container row row-cols-1 justify-content-center my-5" id="form"> <!--  onsubmit="addMovie(event)" -->
             <div action="" class="col-6 d-flex flex-column gap-3">
                 <div class="col">
                     <input class="form-control" type="text" id="name" placeholder="Movie Name">
+                    <small class="text-danger" id="error_name"></small>
                 </div>
                 <div class="col">
                     <input class="form-control" type="text" id="actor" placeholder="Actor">
+                    <small class="text-danger" id="error_actor"></small>
                 </div>
                 <div class="col">
-                    <input class="form-control" type="datetime-local" id="realease" placeholder="Release">
+                    <input class="form-control" type="datetime-local" id="realease">
+                    <small class="text-danger" id="error_release"></small>
                 </div>
                 
                 <!-- CHECKBOX -->
@@ -105,6 +126,7 @@
                     <label class="form-check-label">
                         IMAX
                     </label>
+                    <small class="text-danger" id="error_type"></small>
                 </div>
 
                 <!-- RADIO -->
@@ -117,8 +139,11 @@
                         <label class="form-check-label">
                             Hindi
                         </label>
+                        <small class="text-danger" id="error_lang"></small>
                 </div>
-
+                <div class="col">
+                    
+                </div>
                 <!-- BUTTON -->
                 <div class="col">
                     <button class="btn btn-primary" id="btn">Submit</button>
@@ -157,6 +182,6 @@
     </div>
 </body>
 <script>
-    document.getElementById("btn").addEventListener('submit',addMovie)
+    document.getElementById("form").addEventListener('submit',addMovie)
 </script>
 </html>

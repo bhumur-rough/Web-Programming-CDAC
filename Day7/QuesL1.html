@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>QuestionL1</title>
+    <script>
+        function Employee(name,email,salary,department){
+            this.name = name;
+            this.email = email;
+            this.salary = salary;
+            this.department = department;
+            this.calculateTax = ()=>{
+                return 0.3*this.salary;
+            }
+        }
+
+        let e1 = new Employee("Bhumur","bhumur@gmail.com",120000,"SDE")
+        console.log(e1.name);
+        console.log(e1.email);
+        console.log(e1.salary);
+        console.log(e1.department);
+        console.log(e1.calculateTax());
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

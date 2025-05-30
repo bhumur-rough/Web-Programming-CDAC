@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>QuestionL3</title>
+    <script>
+        class Employee{
+            constructor(name, email, salary, department) {
+                this.name = name;
+                this.email = email;
+                this.salary = salary;
+                this.department = department;
+            }
+
+            calculateTax() {
+                return 0.3*this.salary;
+            }
+        }
+
+        let e1 = new Employee("Bhumur", "bhumur@gmail.com", 1250000, "SDE")
+        console.log(e1.name);
+        console.log(e1.email);
+        console.log(e1.salary);
+        console.log(e1.department);
+        console.log(e1.calculateTax());
+
+
+        class Student{
+            constructor(name,email,department,dob,marks){
+                this.name = name
+                this.email = email
+                this.department = department
+                this.dob = dob
+                this.marks = marks
+            }
+            calculateTotalMarks(){
+                let total = 0;
+                for(let i of marks){
+                    total+=i.mark
+                }
+                return total;
+            }
+        }
+        let marks =[
+            {subject : "maths", mark : 95},
+            {subject : "physics", mark : 92},
+            {subject : "english", mark : 55},
+        ]
+        let s1 = new Student("Bhumur", "bhumur@gmail.com","SDE",new Date(),marks)
+        console.log(s1.name)
+        console.log(s1.email)
+        console.log(s1.department)
+        console.log(s1.dob)
+        console.log(s1.calculateTotalMarks())
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

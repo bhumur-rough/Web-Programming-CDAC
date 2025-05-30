@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>QuestionL2</title>
+    <script>
+        function Student(name,email,department,dob,marks){
+            this.name = name
+            this.email = email
+            this.department = department
+            this.dob = dob
+            this.marks = marks
+            this.calculateTotalMarks = ()=>{
+                let total = 0;
+                for(let i of marks){
+                    total+=i.mark
+                }
+                return total;
+            }
+        }
+        let marks =[
+            {subject : "maths", mark : 95},
+            {subject : "physics", mark : 92},
+            {subject : "english", mark : 55},
+        ]
+        let s1 = new Student("Bhumur", "bhumur@gmail.com","SDE",new Date(),marks)
+        console.log(s1.name)
+        console.log(s1.email)
+        console.log(s1.department)
+        console.log(s1.dob)
+        console.log(s1.calculateTotalMarks())
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
